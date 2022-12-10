@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers</title>
+    <link rel="stylesheet" href="styles/web.css">
+</head>
+<body>
+<div id="content">
+    <header>
+        <a id="logo_link" href="index.html">
+          <img class="logo" src="images/logo.png" alt="Mindaton Spark">
+        </a>
+    </header>
+
+      <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      
+      <div style="padding-left:16px">
+        
+      </div>
+      
+      <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
+      <br>
+
+    <div class="container">
+        <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+        <img src="images/pexels-askar-abayev-6193427.jpg" alt="Our African" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img src="images/pexels-bello-olatunde-10566658.jpg" alt="Our Life" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img src="images/pexels-bestbe-models-2170387.jpg" alt="Our Traditions" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img src="images/pexels-built-by-king-11403833.jpg" alt="Our Pride" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="images/pexels-jamiesx-co-11235398.jpg" alt="Our gods" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="images/pexels-raquel-sílva-3738222.jpg" alt="Our Culture" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    <div class="caption-container">
+        <p id="caption"></p>
+    </div>
+
+    <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="images/pexels-askar-abayev-6193427.jpg" style="width:100%" onclick="currentSlide(1)" alt="Our African">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/pexels-bello-olatunde-10566658.jpg" style="width:100%" onclick="currentSlide(2)" alt="Our Life">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/pexels-bestbe-models-2170387.jpg" style="width:100%" onclick="currentSlide(3)" alt="Our Traditions">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/pexels-built-by-king-11403833.jpg" style="width:100%" onclick="currentSlide(4)" alt="Our Pride">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/pexels-jamiesx-co-11235398.jpg" style="width:100%" onclick="currentSlide(5)" alt="Our gods">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="images/pexels-raquel-sílva-3738222.jpg" style="width:100%" onclick="currentSlide(6)" alt="Our Culture">
+    </div>
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+        <footer>
+            <p> FamilyLegacyTree &copy; 2022 - Okokon Edet</p>
+            <p><a href="index.html"> Site Plan</a></p>
+            <p><a href="contactus.html">Contact Us</a></p>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="images/facebook.png" alt="fb icon">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/twitter.png" alt="twitter icon">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="instagram icon">
+                </a> 
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
